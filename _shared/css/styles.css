@@ -1,0 +1,272 @@
+/* becode/javascript
+ *
+ * /_shared/css/styles.css - Shared styles for javascript exercices
+ *
+ * coded by leny@BeCode
+ * started at 26/10/2018
+ */
+
+:root {
+    --main-blue: #16232E;
+    --light-blue: #63C3D1;
+    --alt-blue: #245060;
+}
+
+html {
+    height: 100%;
+    background: var(--main-blue) url(../img/becode-seal.png) top .5rem center no-repeat;
+    background-size: auto 25vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 62.5%;
+    color: var(--main-blue);
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    padding-top: 17.5vh;
+}
+
+.container {
+    position: relative;
+    width: 66%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+header h1 {
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    padding: .4rem .6rem .6rem;
+    background: var(--light-blue);
+    font: normal 3.2rem "Monserrat", sans-serif;
+    color: white;
+    transform: rotate(-5deg);
+    box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .25);
+}
+
+header h2 {
+    position: absolute;
+    top: -.5rem;
+    left: 5rem;
+    padding: .4rem 1rem .6rem 2rem;
+    background: var(--main-blue);
+    font: normal 2.4rem "Monserrat", sans-serif;
+    color: white;
+    transform: rotate(.5deg);
+    box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .25);
+}
+
+header h2 span {
+    display: block;
+    position: absolute;
+    top: -0.75rem;
+    left: -3.75rem;
+    width: 5.2rem;
+    height: 5.2rem;
+    background: var(--alt-blue);
+    border-radius: 100%;
+    box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .25);
+    line-height: 5.2rem;
+    text-align: center;
+    transform: rotate(7.5deg);
+}
+
+.content {
+    min-height: 25vh;
+    background: white;
+    box-shadow: .25rem .25rem 2.5rem var(--main-blue);
+    padding: 5rem 2rem 2rem;
+}
+
+section.explain {
+    font-size: 1.75rem;
+    line-height: 1.25;
+}
+
+section.explain::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 1px;
+    margin: 0 auto 2.5rem;
+    background: var(--light-blue);
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.field {
+    position: relative;
+    flex: 0 0 48%;
+    margin: 0 auto 2rem;
+}
+
+.field.dob {
+    flex: 0 0 30%;
+    margin: 0 auto 4rem;
+}
+
+.field label {
+    display: block;
+    margin: 0 auto .5rem;
+    font-size: 1.5rem;
+}
+
+.field input, .field select {
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    border: .1rem solid silver;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+}
+
+.field select {
+    height: 100%;
+}
+
+.field input[readonly] {
+    background: #efefef;
+    color: #666;
+}
+
+.field.with-indicator input {
+    padding-right: 6rem;
+}
+
+.field.with-indicator .indicator {
+    position: absolute;
+    right: 1rem;
+    bottom: .7rem;
+    font-size: 1.4rem;
+    color: var(--light-blue);
+}
+
+.field.slot {
+    flex: 0 0 23%;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.actions button, .field.slot button {
+    display: block;
+    min-width: 10rem;
+    margin: 0 .5rem;
+    padding: .5rem 1rem;
+    border: .1rem solid var(--alt-blue);
+    border-radius: .5rem;
+    background: var(--alt-blue);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .25s ease-in-out;
+}
+
+.actions button:hover, .field.slot button:hover {
+    color: var(--main-blue);
+    background-color: white;
+    border-color: var(--main-blue);
+}
+
+.field.slot input {
+    text-align: center;
+}
+
+.field.slot button {
+    width: 100%;
+    margin: .5rem auto;
+}
+
+#target, .target {
+    margin: 0 auto 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+figure {
+    height: 33vh;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+table {
+    width: 100%;
+    border: .1rem solid var(--light-blue);
+    border-collapse: collapse;
+}
+
+table tr td {
+    margin: 0 auto 2rem;
+    padding: .5rem;
+    border: .1rem solid var(--light-blue);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+dl dt {
+    float: left;
+    margin-right: .5rem;
+    font-size: 1.6rem;
+    color: var(--alt-blue);
+}
+
+dl dd {
+    margin: 0 auto 1rem;
+    font-size: 1.6rem;
+}
+
+input.error {
+    border-color: red;
+}
+
+ol#target {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    margin: 0 auto 1rem;
+    padding: 0 0 1rem;
+    border-bottom: .1rem solid silver;
+    text-align: left;
+}
+
+.hero .title {
+    margin: 0 auto 0.5rem;
+}
+
+.hero .name {
+    display: block;
+}
+
+.hero .alter-ego {
+    display: block;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: grey;
+}
+
+.hero .powers {
+    margin: 0 auto;
+    font-size: 1.4rem;
+    color: slategray;
+}
