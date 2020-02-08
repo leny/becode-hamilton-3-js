@@ -26,6 +26,10 @@
         "raisin",
         "cerise",
     ];
+    document.getElementById("run").addEventListener("click", () => {
 
-    // your code here
+      simpleFruits = [...new Set(fruits)];
+      Array.from(simpleFruits);
+      console.log(simpleFruits);
+    });
 })();
