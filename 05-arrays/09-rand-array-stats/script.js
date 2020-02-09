@@ -29,13 +29,13 @@
     };
 
     const displayRandomNumbers = (randomNumbers) => {
-        
-        for (let i = 1; i <= 10; i++) {
-            
-            const $element = document.getElementById('n-'+i);
+    
+        const $elements = document.querySelectorAll('.material td');
 
-            $element.innerHTML = randomNumbers[i-1];
-        }
+        $elements.forEach(($element, i) => {
+            
+            $element.innerHTML = randomNumbers[i];
+        });
     };
 
     const displayLowestNumber = (randomNumbers) => {
