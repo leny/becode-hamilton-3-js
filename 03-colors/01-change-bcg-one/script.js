@@ -10,20 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-
-  document.getElementById("red").addEventListener("click", () => {
-          document.body.style.background = "red";
+    
+    var colors = ["red", "green", "yellow", "blue"];
+    colors.forEach(element => {
+      document.getElementById(element).addEventListener("click", () => {
+        document.querySelectorAll('html')[0].style.backgroundColor = element;
       });
-      document.getElementById("green").addEventListener("click", () => {
-          document.body.style.background = "green";
-      });
-      document.getElementById("yellow").addEventListener("click", () => {
-          document.body.style.background = "yellow";
-      });
-      document.getElementById("blue").addEventListener("click", () => {
-          document.body.style.background = "blue";
-      });
-
-
-
-})();
+    });
+  })();
