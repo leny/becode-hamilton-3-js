@@ -29,7 +29,6 @@
     document.getElementById("run").addEventListener("click", () => {
 
       simpleFruits = [...new Set(fruits)];
-      Array.from(simpleFruits);
       console.log(simpleFruits);
     });
 })();
