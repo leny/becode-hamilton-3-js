@@ -10,5 +10,96 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    const generateRandomNumbers = (min, max) => {
+
+        return Math.floor(Math.random() * (max - min) + min);
+    };
+
+    const getRandomNumbers = () => {
+
+        const randomNumbers = [];
+
+        for (let i = 1; i <= 10; i++) {
+    
+            randomNumbers.push(generateRandomNumbers(1, 100));
+        }
+
+        return randomNumbers;
+    };
+
+    const displayRandomNumbers = (randomNumbers) => {
+    
+        const $elements = document.querySelectorAll('.material td');
+
+        $elements.forEach(($element, i) => {
+            
+            $element.innerHTML = randomNumbers[i];
+        });
+    };
+
+    const displayLowestNumber = (randomNumbers) => {
+
+        const lowestNumber = Math.min(...randomNumbers);
+
+        const $element = document.getElementById('min');
+
+        $element.innerHTML = lowestNumber;
+    };
+
+    const displayHigherNumber = (randomNumbers) => {
+
+        const higherNumber = Math.max(...randomNumbers);
+
+        const $element = document.getElementById('max');
+
+        $element.innerHTML = higherNumber;
+    };
+
+    const displaySumNumbers = (randomNumbers) => {
+
+        const initialVal = 0;
+
+        const sumNumbers = randomNumbers.reduce((accu, val) => val + accu , initialVal);
+
+        const $element = document.getElementById('sum');
+
+        $element.innerHTML = sumNumbers;
+    };
+
+    const displayAverageNumbers = (randomNumbers) => {
+
+        const initialVal = 0;
+
+        const sumNumbers = randomNumbers.reduce((accu, val) => val + accu , initialVal);
+
+        const averageNumbers = sumNumbers / 10;
+
+        const $element = document.getElementById('average');
+
+        $element.innerHTML = averageNumbers;
+    };
+
+    const displayAllNumbers = () => {
+
+        const randomNumbers = getRandomNumbers();
+
+        displayRandomNumbers(randomNumbers);
+    
+        displayLowestNumber(randomNumbers);
+
+        displayHigherNumber(randomNumbers);
+
+        displaySumNumbers(randomNumbers);
+
+        displayAverageNumbers(randomNumbers);
+    };
+ 
+    $btnRun = document.getElementById('run');
+
+    $btnRun.addEventListener(
+        'click',
+        () => displayAllNumbers()
+    );
+
 })();
