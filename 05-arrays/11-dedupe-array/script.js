@@ -26,6 +26,9 @@
         "raisin",
         "cerise",
     ];
+    document.getElementById("run").addEventListener("click", () => {
 
-    // your code here
+      simpleFruits = [...new Set(fruits)];
+      console.log(simpleFruits);
+    });
 })();

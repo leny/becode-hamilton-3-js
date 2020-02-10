@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+    
+    ["red", "green", "yellow", "blue"].forEach(element => {
+      document.getElementById(element).addEventListener("click", () => {
+        document.querySelectorAll('html')[0].style.backgroundColor = element;
+      });
+    });
+  })();
