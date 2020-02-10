@@ -11,8 +11,7 @@
 
 (() => {
     
-    var colors = ["red", "green", "yellow", "blue"];
-    colors.forEach(element => {
+    ["red", "green", "yellow", "blue"].forEach(element => {
       document.getElementById(element).addEventListener("click", () => {
         document.querySelectorAll('html')[0].style.backgroundColor = element;
       });
