@@ -1,0 +1,49 @@
+<!--
+ * becode/javascript
+ *
+ * /10-asynchronous/07-async-get-posts/index.html - 10.7: chargement d'articles (async/await)
+ *
+ * coded by leny@BeCode
+ * started at 09/05/2019
+-->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>BeCode/JavaScript - 10.7: chargement d'articles (async/await)</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+        <link rel="stylesheet" href="../../_shared/css/normalize.css" />
+        <link rel="stylesheet" href="../../_shared/css/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>BeCode / JavaScript</h1>
+                <h2>
+                    <span>10.7</span>
+                    <strong>chargement d'articles (async/await)</strong>
+                </h2>
+            </header>
+            <div class="content">
+                <section class="explain">
+                    <p>La fonction <strong>window.lib.getPosts()</strong> est disponible dans le script. Elle retourne une Promise qui sera résolue, après un petit délai, avec un tableau d'articles.</p>
+                    <p>Au clic sur le bouton, appelle la fonction getPosts et affiche les articles obtenus dans la console (la fonction getPosts sera toujours résolue sans erreur).</p>
+                    <p>
+                        <strong>Note :</strong> pour cet exercice, utilise la syntaxe <em>async/await</em>.
+                    </p>
+                </section>
+                <section class="material">
+                    <div class="actions">
+                        <button type="button" id="run">Lancer le script</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+,
+        <script src="../../_shared/lib/utils.js"></script>
+        <script src="../../_shared/lib/promises.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
+

@@ -10,6 +10,7 @@
     "json-server": "^0.14.2"
   },
   "devDependencies": {
+    "prettier": "^1.19.1",
     "seve": "^0.8.0"
   }
 }
